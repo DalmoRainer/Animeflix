@@ -1,0 +1,195 @@
+/* IMPORTANDO A FONTE ROBOTO */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* VARIÁVEL */
+
+:root {
+    --vermelho: #E50914;
+    --preto: #141414;
+}
+
+
+/* PONTO ZERO / RESET CSS */
+
+* {
+    padding: 0;
+    margin: 0;
+    /* OS ELEMENTOS EM TELA TERÃO EXATAMENTE O TAMANHO QUE EU DEFINIR */
+    box-sizing: border-box;
+    font-family: Roboto;
+    text-decoration: none;
+}
+
+
+/* INICIO REGRAS CSS */
+
+body {
+    background: var(--preto);
+    color: #fff;
+}
+
+
+/* CABEÇALHO DA PÁGINA / TÍTULO E BARRA DE NAVEGAÇÃO*/
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    color: var(--vermelho);
+    font-size: 40px;
+    margin-left: 5px;
+}
+
+header nav a {
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover {
+    color: #fff;
+}
+
+
+/* FILME PRINCIPAL */
+
+.filme-principal {
+    font-size: 16px;
+    background: linear-gradient(rgba(0, 0, 0, .50), rgba(0, 0, 0, .50)100%), url(../img/Rimuru.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .container {
+    margin: 15px;
+    width: 70%;
+}
+
+.filme-principal .descricao {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.filme-principal .titulo {
+    font-size: 35px;
+    margin-top: 30%;
+}
+
+.filme-principal .botoes .botao {
+    background-color: rgba(0, 0, 0, .50);
+    border: none;
+    color: #fff;
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+    border-radius: 10px;
+}
+
+.filme-principal .botoes .botao:hover {
+    background-color: rgba(255, 255, 255, .50);
+    color: var(--preto);
+    transition: 0.5s ease all;
+    cursor: pointer;
+}
+
+.filme-principal .botoes .botao i {
+    margin-right: 5px;
+}
+
+
+/* CARROSEL */
+
+.carrosel-filme {
+    margin: 0 8px 10px 8px;
+}
+
+.titulo-carrosel {
+    font-size: large;
+    margin: 15px 0;
+    text-align: left;
+}
+
+.box-filme {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+
+/* FOOTER */
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+    margin-top: 8px;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer a:last-of-type {
+    margin-bottom: 10px;
+}
+
+
+/* FIM REGRAS CSS */
+
+
+/* INICIO REGRAS PARA DISPOSITIVOS DE IMPRESSÃO */
+
+@media print {}
+
+
+/* FIM REGRAS PARA DISPOSITIVOS DE IMPRESSÃO */
+
+
+/* INICIO REGRAS PARA DISPOSITIVOS MÓVEIS. POR EXEMPLO: SMARTHPHONES */
+
+@media only screen and (max-width: 680px) {
+    header .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0;
+    }
+    .filme-principal .botoes .botao {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* FIM REGRAS PARA DISPOSITIVOS MÓVEIS. POR EXEMPLO: SMARTHPHONES */
+
+
+/* INICIO REGRAS PARA DISPOSITIVOS MÓVEIS MÉDIOS. POR EXEMPLO: TABLETS */
+
+@media only screen and (min-width: 681px) and (max-width: 1024px) {
+    .descricao {
+        width: 85%;
+    }
+    .filme-principal .botoes .botao {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .filme-principal .botoes {
+        display: flex;
+    }
+}
+
+
+/* FIM REGRAS PARA DISPOSITIVOS MÓVEIS MÉDIOS. POR EXEMPLO: TABLETS */
